@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+    /* overflow: hidden;  */
+}
+
+header {
+    background-color: #f8f8f8;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+.header-hover {
+    border-bottom: 8px solid #34cc99;
+    margin-bottom: 8px;
+}
+
+.logo {
+    float: left;
+    padding: 20px 0px;
+}
+
+.logo a{
+    font-size: 28px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #333;
+    font-family: system-ui;
+}
+.menu {
+    float: right;
+    margin-top: 25px;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li{ 
+    display: inline-block;
+    position: relative;
+}
+
+.menu ul li.parent-menu {
+    display: inline-block;
+    padding: 10px 10px 0px 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-left: 50px;
+    position: relative;
+    font-weight: 500;
+
+}
+
+.menu ul li.parent-menu:hover{
+    /* background: #3cb06fe3; */
+    background: #34cc99;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.menu ul li:first-child {
+    margin-left: 0; 
+}
+
+.menu ul li a{
+    display: block;
+    color: #333;
+}
+
+a.link-parent-menu{
+    padding-bottom: 25px;
+}
+.submenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: #34cc99;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top: 8px solid #34cc99;
+}
+
+.menu ul li:hover .submenu {
+    display: block;
+}
+
+.submenu li{
+    width: 100%;
+    text-align: center;
+    min-width: 200px;
+}
+
+.submenu li a{
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 14px 25px;
+    color: #fff !important;
+    font-weight: 500;
+    white-space: nowrap;
+    text-shadow: #333333 0.1em 0.1em 0.1em;
+}
+.submenu li:hover{
+    background: #019966;
+}
+.banner{
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.banner img{
+    width: 100%;
+    opacity: 0.8;
+}
