@@ -11,7 +11,6 @@ a{
     width: 90%;
     max-width: 1440px;
     margin: 0 auto;
-    /* overflow: hidden;  */
 }
 
 header {
@@ -26,6 +25,9 @@ header {
     margin-bottom: 8px;
 }
 
+.show{
+    display: block!important;
+}
 .logo {
     float: left;
     padding: 20px 0px;
@@ -34,7 +36,7 @@ header {
 .logo a{
     font-size: 28px;
     letter-spacing: 2px;
-    font-weight: 700;
+    font-weight: bold
     color: #333;
     font-family: system-ui;
 }
@@ -66,7 +68,6 @@ header {
 }
 
 .menu ul li.parent-menu:hover{
-    /* background: #3cb06fe3; */
     background: #34cc99;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
@@ -79,6 +80,7 @@ header {
 .menu ul li a{
     display: block;
     color: #333;
+    font-weight: bold;
 }
 
 a.link-parent-menu{
@@ -94,10 +96,6 @@ a.link-parent-menu{
     border-top: 8px solid #34cc99;
 }
 
-.menu ul li:hover .submenu {
-    display: block;
-}
-
 .submenu li{
     width: 100%;
     text-align: center;
@@ -108,7 +106,7 @@ a.link-parent-menu{
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    padding: 14px 25px;
+    padding: 17px 25px;
     color: #fff !important;
     font-weight: 500;
     white-space: nowrap;
@@ -126,3 +124,91 @@ a.link-parent-menu{
     width: 100%;
     opacity: 0.8;
 }
+.menu-toggle{
+    display: none;
+}
+@media only screen and (min-width: 768px){
+    .menu ul li:hover .submenu {
+        display: block;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .menu-toggle{
+        display: block;
+    }
+    .logo{
+        padding: 10px 0px;
+    }
+    .menu {
+        float: none;
+        margin-top: 0;
+    }
+    .menu ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ebeaea;
+        text-align: center;
+        padding: 0;
+    }
+    .menu ul li {
+        display: block;
+        margin: 0;
+        padding: 10px 0;
+    }
+    .menu-toggle {
+        display: block;
+        text-align: right;
+        cursor: pointer;
+        float: left;
+        padding-top: 20px;
+        padding-right: 15px;
+    }
+    .menu ul li.parent-menu{
+        width: 100%;
+        padding: 0px;
+        margin-left: 0px;
+    }
+    .banner{
+        width: 100%;
+        max-height: auto;
+        padding-top: 60px;
+    }
+    a.link-parent-menu {
+        line-height: 50px;
+        border-bottom: 1px solid #ccc;
+        text-align: left;
+        padding: 0px 20px 0px 15px;
+    }
+    .submenu{
+        display: block;
+        position: relative!important;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border-top: 0px;
+        background-color: #42bd78;
+    }
+    .submenu li{
+        border-bottom: 1px solid #ccc;
+        text-align: left;
+        padding: 0px!important;
+    }
+    .submenu li a{
+        background: #50b87e8f;
+    }
+    a.link-parent-menu {
+        padding-right: 20px; 
+        position: relative;
+    }
+    
+    a.link-parent-menu.has-submenu:after {
+        content: "▼";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        font-size: 13px;
+        color: #333;
+        padding-right: 8px;
